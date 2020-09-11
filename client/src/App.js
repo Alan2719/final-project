@@ -15,12 +15,13 @@ function App() {
       <Router>
       <div>
         <Switch>
-        <Route exact path="/" component={SignUp} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/newtrip" component={NewTrip} />
-        <Route exact path="/flightresults" component={FlightResults} />
-        <Route exact path="/agenda" component={Agenda} />
-        <Route exact path="/checklist" component={Checklist} />
+        
+        <Route exact path={process.env.PUBLIC_URL + "/"} component={SignUp} />
+        <Route exact path={process.env.PUBLIC_URL + "/login"} component={Login} />
+        <Route exact path={process.env.PUBLIC_URL + "/newtrip"} component={NewTrip} />
+        <Route exact path={process.env.PUBLIC_URL + "/flightresults"} component={FlightResults} />
+        <Route exact path={process.env.PUBLIC_URL + "/agenda"} component={Agenda} />
+        <Route exact path={process.env.PUBLIC_URL + "/checklist"} component={Checklist} />
         </Switch>
       </div>
     </Router>

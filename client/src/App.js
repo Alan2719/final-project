@@ -15,7 +15,6 @@ function App() {
       <Router>
       <div>
         <Switch>
-        
         <Route exact path={process.env.PUBLIC_URL + "/"} component={SignUp} />
         <Route path={process.env.PUBLIC_URL + "/login"} component={Login} />
         <Route path={process.env.PUBLIC_URL + "/newtrip"} component={NewTrip} />

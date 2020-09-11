@@ -17,11 +17,11 @@ function App() {
         <Switch>
         
         <Route exact path={process.env.PUBLIC_URL + "/"} component={SignUp} />
-        <Route exact path={process.env.PUBLIC_URL + "/login"} component={Login} />
-        <Route exact path={process.env.PUBLIC_URL + "/newtrip"} component={NewTrip} />
-        <Route exact path={process.env.PUBLIC_URL + "/flightresults"} component={FlightResults} />
-        <Route exact path={process.env.PUBLIC_URL + "/agenda"} component={Agenda} />
-        <Route exact path={process.env.PUBLIC_URL + "/checklist"} component={Checklist} />
+        <Route path={process.env.PUBLIC_URL + "/login"} component={Login} />
+        <Route path={process.env.PUBLIC_URL + "/newtrip"} component={NewTrip} />
+        <Route path={process.env.PUBLIC_URL + "/flightresults"} component={FlightResults} />
+        <Route path={process.env.PUBLIC_URL + "/agenda"} component={Agenda} />
+        <Route path={process.env.PUBLIC_URL +"/checklist"} component={Checklist} />
         </Switch>
       </div>
     </Router>

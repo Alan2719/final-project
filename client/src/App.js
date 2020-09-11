@@ -15,12 +15,12 @@ function App() {
       <Router>
       <div>
         <Switch>
-        <Route exact path={process.env.REACT_APP_PUBLIC_URL + "/"} component={SignUp} />
-        <Route path={process.env.REACT_APP_PUBLIC_URL + "/login"} component={Login} />
-        <Route path={process.env.REACT_APP_PUBLIC_URL + "/newtrip"} component={NewTrip} />
-        <Route path={process.env.REACT_APP_PUBLIC_URL + "/flightresults"} component={FlightResults} />
-        <Route path={process.env.REACT_APP_PUBLIC_URL + "/agenda"} component={Agenda} />
-        <Route path={process.env.REACT_APP_PUBLIC_URL +"/checklist"} component={Checklist} />
+        <Route exact path={"/"} component={SignUp} />
+        <Route path={"/login"} component={Login} />
+        <Route path={"/newtrip"} component={NewTrip} />
+        <Route path={"/flightresults"} component={FlightResults} />
+        <Route path={"/agenda"} component={Agenda} />
+        <Route path={"/checklist"} component={Checklist} />
         </Switch>
       </div>
     </Router>

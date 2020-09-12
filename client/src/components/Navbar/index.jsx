@@ -18,14 +18,17 @@ function Navbar(){
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Button btnName="NEW TRIP">
+                        {/* <Button btnName="NEW TRIP"> */}
                         <Link
                             to="/"
                             className = { window.location.pathname === "/"
                             ? "nav-link" : "nav-link" 
                             }>
+                                <Button btnName="SignUp">
+                                        
+                                </Button>
                         </Link>
-                        </Button>
+                        {/* </Button> */}
                     </li>
                     <li className="nav-item">
                         <Button btnName="AGENDA">

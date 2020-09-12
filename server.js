@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 var bodyParser = require('body-parser');
 const MongoStore = require('connect-mongo')(session);
+const path = require("path");
 
 require("dotenv").config();
 

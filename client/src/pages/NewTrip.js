@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar2 from "../components/Navbar2";
+import Navbar2 from "../components/Navbar";
 import Header from "../components/Header";
 import NewTripInput from "../components/NewTripInput";
 import Footer from "../components/Footer";

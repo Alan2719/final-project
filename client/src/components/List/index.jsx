@@ -6,7 +6,7 @@ function List(props) {
     console.log(props.items.items)
     return(
         <ul class="list-group checklistList">
-            <li className="list-group-item active">Travel Checklist</li>
+            <li className="list-group-item">Travel Checklist</li>
             {props.items.items !== 0 ? (
                 props.items.items.map((item, index) => {
                     return (

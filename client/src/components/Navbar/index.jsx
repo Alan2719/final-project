@@ -20,27 +20,29 @@ function Navbar(){
                     <li className="nav-item">
                         {/* <Button btnName="NEW TRIP"> */}
                         <Link
-                            to="/"
-                            className = { window.location.pathname === "/"
+                            to="/newtrip"
+                            className = { window.location.pathname === "/newtrip"
                             ? "nav-link" : "nav-link" 
                             }>
-                                <Button btnName="SignUp">
+                                <Button btnName="NEW TRIP">
                                         
                                 </Button>
                         </Link>
                         {/* </Button> */}
                     </li>
                     <li className="nav-item">
-                        <Button btnName="AGENDA">
+                        
                         <Link 
-                            to="/newtrip"
-                            className = { window.location.pathname === "/newtrip"
+                            to="/agenda"
+                            className = { window.location.pathname === "/agenda"
                             ? "nav-link" : "nav-link" 
                             }>
+                                <Button btnName="AGENDA">
+
+                                </Button>
                         </Link>
-                        </Button>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Button btnName="LOG OUT">
                         <Link
                             to="/logout"
@@ -49,7 +51,7 @@ function Navbar(){
                             }>
                         </Link>
                         </Button>
-                    </li>
+                    </li> */}
                     </ul>
                 </div>
                 </nav>

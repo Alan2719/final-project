@@ -1,3 +1,7 @@
 .checklistList {
     margin-top: 10px;
 }
+
+.list-group-item{
+    background-color:#81b6ff;
+}

@@ -1,11 +1,13 @@
 import React from "react";
 import "./styles.css";
+import Image from "../../assets/logo.png";
 
 //const isAuthenticated = require("../../../../config/middleware/isAuthenticated");
 
 function SignUpForm(props){
     return (
             <form className="form" onSubmit={props.handleSubmitForm}>
+                <img src={Image} alt="logo" className="logo"></img>
                 <p className="form-title">SIGN UP</p>
                 <div className="form-group">
                     <label for="exampleInputEmail1">NAME</label>

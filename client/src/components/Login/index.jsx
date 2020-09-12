@@ -1,10 +1,12 @@
 import React from "react";
 import "./styles.css";
+import Image from "../../assets/logo.png";
 
 function LogInForm(props){
     return (
         <div className="container">
             <form className="form" onSubmit = {props.handleSubmitForm}>
+            <img src={Image} alt="logo" className="logo"></img>
                 <p className="form-title">LOG IN</p>
                 <div className="form-group">
                     <label for="exampleInputEmail1">EMAIL</label>

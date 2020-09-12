@@ -5,6 +5,7 @@ import List from "../components/List";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 import { useHistory } from "react-router-dom";
+import "./styles.css";
 
 let array = [];
 
@@ -73,13 +74,15 @@ function Checklist() {
             <h5>Your trip <span><strong></strong></span> has been saved! Create your travel checklist</h5>
         </Header>
         <Wrapper>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-tasks"></i></span>
+        <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                    <span className="input-group-text checklist" id="basic-addon1"><i class="fas fa-tasks"></i></span>
                 </div>
-                <input type="text" ref={inputRef} class="form-control" placeholder="Add an item" aria-label="Username" aria-describedby="basic-addon1"></input>
+                <input type="text" ref={inputRef} className="form-control" placeholder="Add an item" aria-label="Username" aria-describedby="basic-addon1" className="addAnItem"></input>
+                <div className="input-group-append">
+                    <button type="button" onClick={addToCheckList} className="btn btn-primary add">Add</button>
+                </div>
             </div>
-            <button type="button" onClick={addToCheckList} class="btn btn-primary">Add</button>
             <List 
                 items = {list}
                 removeItem = {removeItem}

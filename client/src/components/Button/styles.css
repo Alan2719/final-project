@@ -1,15 +1,12 @@
-.btn-outline-primary {
-    color: #ffffff;
-    background-color: transparent;
-    background-image: none;
-    border-color: #ff8023;
-    /* margin: 10px; */
-    font-weight: 300;
+.navButton{
+    color: #FFFFFF;
+    border: solid 1px #FF8023;
+    margin-left:10px;
+    border-radius:2px;
+    text-align:center;
+    background-color:#192433;
 }
-
-.btn-outline-primary:hover {
-    color: #ffffff;
-    background-color: #ff8023;
-    background-image: none;
-    border-color: #ff8023;
+.navButton:hover{
+    background-color: #FF8023;
+    color:#ffffff;
 }

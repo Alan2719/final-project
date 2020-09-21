@@ -29,5 +29,8 @@ export default {
   },
   allTrips: function() {
     return axios.get("/api/trip/tripInfo");
+  },
+  logout: function() {
+    return axios.get("/api/users/logout");
   }
 };

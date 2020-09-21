@@ -31,7 +31,7 @@ export default class MyForm extends React.Component {
       <div style={{ 
         color:"#192433"
         }}>
-        {selectedDay && <p >Day: {selectedDay.toLocaleDateString()}</p>}
+        {/* {selectedDay && <p >Day: {selectedDay.toLocaleDateString()}</p>} */}
         <DayPickerInput
         placeholder="Departing"
         selectedDay={selectedDay} 

@@ -4,7 +4,11 @@ var passport = require("../config/passport");
 // Defining methods for the booksController
 module.exports = {
     authorize: function(req,res) {
-        res.json(req.user);
+        if (!req.user) {
+            res.json("Unauthorized");
+        } else {
+            res.json(req.user);
+        }
     },
     getUser: function(req, res) {
         if (!req.user) {
@@ -28,8 +32,12 @@ module.exports = {
             db.User.findOne({
                 _id: req.user.id
             })
-            .populate('trips')
-            .populate('checklist')
+            .populate({
+                path:'trips',
+                populate: {
+                    path: 'checklist'
+                }
+            })
             .then(user => {
                 res.json(user);
             })
@@ -55,6 +63,6 @@ module.exports = {
     logout: function(req,res) {
         console.log(req);
         req.logout();
-        res.redirect("/api/users/login");
+        // res.redirect("/api/users/login");
     }
 };

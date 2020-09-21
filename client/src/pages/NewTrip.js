@@ -9,8 +9,12 @@ import Flights from "../components/Flight";
 import Loading from "../components/loading";
 import Modal from "../components/Modal";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function NewTrip() {
+
+    toast.configure();
 
     const history = useHistory();
 
@@ -41,7 +45,13 @@ function NewTrip() {
         API.getUserInfo()
         .then(dbUser => {
             console.log(dbUser.data);
-            setUserInfo(dbUser.data);
+            if (dbUser.data === "") {
+                history.push({
+                    pathname:"/login"
+                });
+            } else {
+                setUserInfo(dbUser.data);
+            }
         })
     }, [flightInfo]);
 
@@ -70,23 +80,49 @@ function NewTrip() {
 
     function getFlights(event) {
         event.preventDefault();
-        setLoading(true);
         console.log(tripInfo);
-        API.lookFlights(tripInfo)
-        .then(dbFlight => {
-            console.log(dbFlight.data);
-            setFlightInfo(dbFlight.data);
-            console.log("NEW TRIP FILE",flightInfo);
-            setLoading(false);
-        })
-        .catch((error) => {
-            console.log(error);
-        })
+        console.log(typeof tripInfo.destination);
+        console.log(typeof tripInfo.departureDate);
+        console.log(typeof tripInfo.arrivalDate);
+        if (tripInfo.origin === "" || tripInfo.destination === "" || tripInfo.departureDate === "" || tripInfo.arrivalDate === "") {
+            console.log("TOAST");
+            displayToast("Information is missing to start searching", "error");
+        } else {
+            setLoading(true);
+            API.lookFlights(tripInfo)
+            .then(dbFlight => {
+                console.log(dbFlight.data);
+                setFlightInfo(dbFlight.data);
+                console.log("NEW TRIP FILE",flightInfo);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        }
     }
 
     function handleHideModal() {
         setShowModal(false);
     }
+
+    function displayToast(message, type) {
+        let options = {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        };
+        if (type === "error") {
+          toast.error(message, options);
+        } else {
+          console.error("Wrong Toast Type");
+        }
+    }
+
 
     function chooseFlight() {
         console.log(oneFlight);

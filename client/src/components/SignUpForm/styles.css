@@ -75,3 +75,7 @@ label {
 .linkToSignup {
     text-decoration: none;
 }
+
+.nav-link:hover {
+    color: #81b6ff;
+}

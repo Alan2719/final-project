@@ -28,10 +28,16 @@ function Checklist() {
         API.userTrips()
         .then(dbTrip => {
             console.log(dbTrip.data);
-            setUserInfo(dbTrip.data);
-            setCurrentTrip(dbTrip.data.trips[(dbTrip.data.trips.length) - 1]);
-            // console.log(userInfo);
-            // console.log(currentTrip);
+            if (dbTrip.data === "") {
+                history.push({
+                    pathname:"/login"
+                });
+            } else {
+                setUserInfo(dbTrip.data);
+                setCurrentTrip(dbTrip.data.trips[(dbTrip.data.trips.length) - 1]);
+                // console.log(userInfo);
+                // console.log(currentTrip);
+            }
         })
     },[]);
 

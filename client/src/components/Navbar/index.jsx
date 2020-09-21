@@ -1,11 +1,23 @@
 import React from "react";
 import "./styles.css"
 import {Link} from "react-router-dom";
-import Button from "../Button"
+import Button from "../Button";
+import Image from "../../assets/logo2.png";
+// import API from "../utils/API";
 
 function Navbar(){
+
+    // function logout() {
+    //     API.logout()
+    //     .then(() => console.log("LOG OUT"))
+    //     .catch(err => console.log(err));
+    // }
+
     return (
         <div className="container-fluid navbar">
+            {/* <div className="logo-cont">
+                <img className="header-image" src={Image}></img>
+            </div> */}
             <nav className="navbar navbar-expand-lg">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon">
@@ -42,16 +54,17 @@ function Navbar(){
                                 </Button>
                         </Link>
                     </li>
-                    {/* <li className="nav-item">
-                        <Button btnName="LOG OUT">
+                    <li className="nav-item">
                         <Link
-                            to="/logout"
-                            className = { window.location.pathname === "/logout"
+                            to="/login"
+                            className = { window.location.pathname === "/login"
                             ? "nav-link" : "nav-link" 
                             }>
+                                <Button btnName="LOG OUT">
+                                    {/* {onclick=logout} */}
+                                </Button>
                         </Link>
-                        </Button>
-                    </li> */}
+                    </li>
                     </ul>
                 </div>
                 </nav>

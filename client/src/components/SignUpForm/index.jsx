@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import Image from "../../assets/logo.png";
+import {Link} from "react-router-dom";
 
 //const isAuthenticated = require("../../../../config/middleware/isAuthenticated");
 
@@ -23,7 +24,14 @@ function SignUpForm(props){
                 </div>
                 <div className="row">
                     <div className="col-8 toLogin-col">
-                        <a href="/login" className="toLogin">Already a member?<span><strong> LOG IN</strong></span></a>
+                        {/* <a href="/login" className="toLogin">Already a member?<span><strong> LOG IN</strong></span></a> */}
+                        <Link
+                            to="/login"
+                            className = { window.location.pathname === "/login"
+                            ? "nav-link" : "nav-link" 
+                            }>
+                                Already a member? LOG IN
+                        </Link>
                     </div>
                     <div className="col-4">
                         <button className="signupBtn">SIGN UP</button>

@@ -29,7 +29,7 @@ export default class MyForm extends React.Component {
     const { selectedDay } = this.state;
     return (
       <div className="dayPickerInput">
-        {selectedDay && <p >Day: {selectedDay.toLocaleDateString()}</p>}
+        {/* {selectedDay && <p >Day: {selectedDay.toLocaleDateString()}</p>} */}
         <DayPickerInput placeholder="Returning" onDayChange={this.handleDayChange}/>
       </div>
     );

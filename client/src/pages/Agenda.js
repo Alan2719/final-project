@@ -9,8 +9,12 @@ import FlightCard from "../components/FlightCard";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 import ModalChecklist from "../components/ModalChecklist";
+import { useHistory } from "react-router-dom";
 
 function Agenda() {
+
+  const history = useHistory();
+
   const [trip, setTrip] = useState([]);
 
   const [oneTrip, setOneTrip] = useState([]);
@@ -18,9 +22,17 @@ function Agenda() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    API.allTrips().then((dbTrips) => {
+    API.userTrips()
+    .then((dbTrips) => {
       console.log(dbTrips.data);
-      setTrip(dbTrips.data);
+      console.log(dbTrips.data.trips);
+      if (dbTrips.data === "") {
+          history.push({
+            pathname:"/login"
+        }); 
+      } else {
+        setTrip(dbTrips.data.trips);
+      }
     });
   }, []);
 

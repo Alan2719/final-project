@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import Image from "../../assets/logo.png";
+import {Link} from "react-router-dom";
 
 function LogInForm(props){
     return (
@@ -18,7 +19,14 @@ function LogInForm(props){
                 </div>
                 <div className="row">
                     <div className="col-8 toLogin-col">
-                        <a href="/" className="toLogin">Don't have an account?<span><strong> Register </strong></span></a>
+                        {/* <a href="/" className="toLogin">Don't have an account?<span><strong> Register </strong></span></a> */}
+                        <Link
+                            to="/"
+                            className = { window.location.pathname === "/"
+                            ? "nav-link" : "nav-link" 
+                            }>
+                                Don't have an account? Sign Up
+                        </Link>
                     </div>
                     <div className="col-4">
                         <button className="btn btn-primary" type="submit" value="SUBMIT">SUBMIT</button>

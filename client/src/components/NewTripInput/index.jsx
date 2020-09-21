@@ -62,13 +62,23 @@ function NewTripInput(props) {
                                 </div>
                         </div>    
                         <div className="col-4">
-                            <div className="finput-group mb-3">
-                                <DayPickerDeparture className="custom-select newtrip-form-control" name="departure" id="inputGroupSelect01" {...props}/>
+                            <div className="input-group-prepend mb-3">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fas fa-calendar-times"></i>
+                                </span>
+                                <div className="finput-group mb-3">
+                                    <DayPickerDeparture className="custom-select newtrip-form-control" name="departure" id="inputGroupSelect01" {...props}/>
+                                </div>
                             </div>
                         </div>    
                         <div className="col-4">
-                            <div className="input-group mb-3">
-                                <DayPickerReturn className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01" {...props}/>
+                            <div className="input-group-prepend mb-3">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fas fa-calendar-times"></i>
+                                </span>
+                                <div className="input-group mb-3">
+                                    <DayPickerReturn className="custom-select newtrip-form-control" name="arrival" id="inputGroupSelect01" {...props}/>
+                                </div>
                             </div>
                         </div>
                     </div>  

@@ -25,3 +25,14 @@
     color:#ffffff;
     font-weight: 600;
 }
+
+@media (max-width: 575px) {
+    /* .col-xs-6 {
+        flex: 0 0 50%;
+        min-width: 50%;
+    } */
+
+    .tripInfo-card {
+        font-size: 14px;
+    }
+}

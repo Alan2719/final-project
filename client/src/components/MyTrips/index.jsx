@@ -26,6 +26,13 @@ function MyTripsList(props) {
                                         >
                                             <i class="fas fa-clipboard-list"></i>
                                         </button>
+                                        <button type="button" 
+                                            className="btn btn-danger deleteBtn"
+                                            onClick={props.deleteTrip}
+                                            data-value={_id}
+                                        >
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
                                     </li>
                                 )
                             })

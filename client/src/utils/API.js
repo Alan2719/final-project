@@ -32,5 +32,8 @@ export default {
   },
   logout: function() {
     return axios.get("/api/users/logout");
+  },
+  delete: function(tripId) {
+    return axios.delete("/api/trip/deleteTrip", tripId);
   }
 };

@@ -55,6 +55,15 @@ function Agenda() {
     setShowModal(false);
   }
 
+  function deleteTrip(event) {
+    event.preventDefault();
+    let id = event.currentTarget.getAttribute("data-value");
+    console.log(id);
+    API.delete({ tripId: id })
+    .then(dbTrip => {
+      console.log(dbTrip);
+    })
+  }
 
   return (
     <div>
@@ -66,6 +75,7 @@ function Agenda() {
               tripsInfo={trip}
               filterFlight={filterFlight}
               getChecklist={getChecklist}
+              deleteTrip={deleteTrip}
             />
           </div>
           <div className="col-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">

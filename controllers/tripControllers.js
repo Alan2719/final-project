@@ -44,5 +44,16 @@ module.exports = {
         .then(dbTrips => {
             res.json(dbTrips);
         })
-    }
+    },
+    deleteTrip: function(req, res) {
+        console.log("DELETE FROM BACKEND");
+        let tripId = req.body.tripId;
+        console.log(req.body);
+        // db.Trip
+        // .findById({ _id: tripId })
+        // .then(dbModel => dbModel.remove())
+        // .then(dbModel => res.json(dbModel))
+        // .catch(err => res.status(422).json(err));
+        res.json("TRIP DELETED");
+  }
 }

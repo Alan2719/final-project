@@ -30,3 +30,24 @@
     }
 }
 
+.price-cont {
+    background-color: #192433;
+    margin-bottom: 10px;
+    /* padding: 8px; */
+    padding-top: 12px;
+}
+
+.flight-price {
+    color: white;
+}
+
+@media (max-width: 575px) {
+    .col-xs-6 {
+        flex: 0 0 50%;
+        min-width: 50%;
+    }
+
+    .flight-price {
+        font-size: 14px;
+    }
+}

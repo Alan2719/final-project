@@ -19,13 +19,13 @@ function AgendaTitle(props) {
                 <div className="agenda-tit">
                     <div className="row title-info">
                         <div className="col-6 agenda-title">
-                            <p>{item.tripName}</p>
+                            <p className="tripInfo-card">{item.tripName}</p>
                         </div>
                         <div className="col-3 agenda-date">
-                            <p>Date: {changeFormat(item.departureDate)}</p>
+                            <p className="tripInfo-card">Date: {changeFormat(item.departureDate)}</p>
                         </div>
                         <div className="col-3 trip-type">
-                            <p>{item.category}</p>
+                            <p className="tripInfo-card">{item.category}</p>
                         </div>
                     </div>
                 </div>

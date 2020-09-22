@@ -45,23 +45,9 @@ a:hover{
         flex: 0 0 100%;
         min-width: 100%;
     }
+}
 
-    /* .image {
-        flex: 100%;
-        max-width: 100% !important;
-    }
-
-    .information {
-        flex: 100%;
-        max-width: 100%;
-    }
-
-    .display .info .image img {
-        width: 100px;
-        height: auto;
-    }
-
-    .display .info .information p {
-        font-size: 15px;
-    } */
+.deleteBtn {
+    float: right;
+    margin-top: 10px;
 }

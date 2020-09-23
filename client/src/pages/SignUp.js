@@ -34,7 +34,7 @@ function SignUp(){
     function handleSubmitForm(event) {
         event.preventDefault();
         if (userInfo.username === "" || userInfo.email === "" || userInfo.password === "") {
-            displayToast("All fields are required!", "error")
+            displayToast("All fields are required", "error")
         } else {
             API.signup(userInfo)
             .then(result => {
@@ -44,7 +44,12 @@ function SignUp(){
                     pathname:"/login"
                 });
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                console.log(err.message);
+                if (err.message === "Request failed with status code 422") {
+                    displayToast("This email has already been registered", "error")
+                }
+            });
         }
     }
 

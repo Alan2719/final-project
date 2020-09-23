@@ -3,7 +3,7 @@ import "./styles.css";
 import Button from "../Button";
 
 function Flights(props) {
-    console.log(props);
+    console.log(props.flightInfo);
     //const array = flightInfo.map(info => info.itineraries[0].segments[0].departure);
     // console.log(array);
     // const { tripInfo, setTripInfo } = useContext(FlightContext);
@@ -122,7 +122,6 @@ function Flights(props) {
             }) 
         ) : (
             <></>
-        
         )}
         </>
         // </> 

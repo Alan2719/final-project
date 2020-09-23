@@ -38,6 +38,34 @@ const codes = [
     {
         city: "Rio de Janeiro",
         value: "RIO"
+    },
+    {
+        city: "Vancouver",
+        value: "YVR"
+    },
+    {
+        city: "Lisbon",
+        value: "LIS"
+    },
+    {
+        city: "Melbourne",
+        value: "MLB"
+    },
+    {
+        city: "Dublin",
+        value: "DUB"
+    },
+    {
+        city: "Toulouse",
+        value: "TLS"
+    },
+    {
+        city: "Monterrey",
+        value: "MTY"
+    },
+    {
+        city: "Cancun",
+        value: "CUN"
     }
 ]
 
